@@ -1,0 +1,118 @@
+<!-- <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> -->
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<link rel="stylesheet" type="text/css" href="/assets/css/master.css" />
+	<script src="/assets/js/locale.js"></script>
+	<ui:insert name="head"></ui:insert>
+	<ui:insert name="CSS"></ui:insert>
+	
+
+	<!-- ISSU DU TEMPLATE DU PROJET 3 -->
+
+	<!-- 	Fav icon -->
+	<!-- 	<link rel="apple-touch-icon" sizes="180x180" -->
+	<!-- 		href="icon/apple-touch-icon.png" /> -->
+	<!-- 	<link rel="icon" type="image/png" sizes="32x32" -->
+	<!-- 		href="icon/favicon-32x32.png" /> -->
+	<!-- 	<link rel="icon" type="image/png" sizes="16x16" -->
+	<!-- 		href="icon/favicon-16x16.png" /> -->
+	<!-- 	<link rel="manifest" href="icon/site.webmanifest" /> -->
+</h:head>
+
+<h:body>
+	<h1>Template de l'appli</h1>
+
+	<div id="content">
+	<ui:insert name="content"></ui:insert>
+	</div>
+	<p:commandButton value="Enregistrer" styleClass="boutonSpecial"
+		action="#{editionCandidatureBean.enregistrer()}" />
+	<p:commandButton value="Annuler" styleClass="boutonGris" />
+
+	<!-- ISSU DU TEMPLATE DU PROJET 3 -->
+
+	<!-- 	<b:navBar brand="#{navigationBean.websiteTitle}" brandHref="./" -->
+	<!-- 		fluid="true"> -->
+
+	<!-- 		<b:navbarLinks class="visible-xs"> -->
+	<!-- 			<b:navLink href="#" value="Mon compte" /> -->
+	<!-- 			<b:navLink href="#" value="Mes alertes" /> -->
+	<!-- 			<div class="dropdown-divider"></div> -->
+	<!-- 		</b:navbarLinks> -->
+
+	<!-- 		<b:navbarLinks> -->
+	<!-- 			<ui:repeat var="item" value="#{navigationBean.menuItems}"> -->
+	<!-- 				<b:dropMenu value="#{item.label}"> -->
+	<!-- 					Sous-menu -->
+	<!-- 					<ui:repeat var="subItem" value="#{item.subItems}"> -->
+	<!-- 						<b:navLink href="#{subItem.url}" value="#{subItem.label}" /> -->
+	<!-- 					</ui:repeat> -->
+	<!-- 				</b:dropMenu> -->
+	<!-- 			</ui:repeat> -->
+	<!-- 		</b:navbarLinks> -->
+
+
+	<!-- 		<b:navbarLinks pull="right" styleClass="hidden-xs navbarRightBlock"> -->
+	<!--  Notifications -->
+	<!-- 			<h:panelGroup styleClass="notificationGroup" layout="block" -->
+	<!-- 				id="notificationGroup" rendered="#{mbConnect.connecte}"> -->
+	<!-- 				<h:form id="notificationForm"> -->
+
+	<!-- 					<b:poll action="#{notificationBean.pollNotifications()}" -->
+	<!-- 						interval="7000" update="@form"></b:poll> -->
+
+	<!-- 					<b:dropMenu iconAwesome="bell" -->
+	<!-- 						value="#{notificationBean.getNotificationMessage()}" -->
+	<!-- 						styleClass="hidden-xs" aria-labelledby="dropdownMenuButton"> -->
+	<!-- 						Sous-menu alertes -->
+	<!-- 						<ui:repeat var="subItem" value="#{notificationBean.notifications}"> -->
+	<!-- 							<b:navLink href="#{subItem.url}" value="#{subItem.shortMessage}" /> -->
+	<!-- 						</ui:repeat> -->
+	<!-- 					</b:dropMenu> -->
+	<!-- 				</h:form> -->
+	<!-- 			</h:panelGroup> -->
+	<!-- 	navForm -->
+
+	<!-- 	Espace login -->
+	<!-- 			<h:form id="loginForm"> -->
+	<!-- 				<div class="myAccountButton navbar-form navbar-left"> -->
+
+	<!-- 					<b:navLink href="./connexion" value="Se connecter" -->
+	<!-- 						styleClass="loggedUserName" -->
+	<!-- 						rendered="#{mbConnect.utilisateur == null}" /> -->
+	<!-- 					<b:dropMenu value="#{mbConnect.getNomAffiche()}" -->
+	<!-- 						styleClass="loggedUserName" -->
+	<!-- 						rendered="#{mbConnect.utilisateur != null}"> -->
+	<!-- 												Sous-menu login -->
+	<!-- 						<b:navLink href="./moncompte" value="Mon compte" /> -->
+	<!-- 						<b:navCommandLink value="Déconnexion" -->
+	<!-- 							action="#{mbConnect.deconnect()}" /> -->
+	<!-- 					</b:dropMenu> -->
+	<!-- 					<h:panelGroup layout="block" class="pictureDiv" -->
+	<!-- 						rendered="#{mbConnect.utilisateur != null}"> -->
+	<!-- 						<img src="#{mbConnect.utilisateur.coordonnees.photo}" alt="image"></img> -->
+	<!-- 					</h:panelGroup> -->
+	<!-- 				</div> -->
+	<!-- 			</h:form> -->
+
+	<!-- 		</b:navbarLinks> -->
+
+	<!-- 	</b:navBar> -->
+
+	<!-- 	<div id="contentFlex"> -->
+	<!-- 		<div id="contentDiv"> -->
+	<!-- 			<div id="contentInclude"> -->
+	<!-- 				<ui:insert name="content" /> -->
+	<!-- 			</div> -->
+	<!-- 		</div> -->
+	<!-- 	</div> -->
+
+</h:body>
+</html>

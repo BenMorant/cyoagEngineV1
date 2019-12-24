@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<ui:composition template="/welcomeV1.xhtml">
+	<ui:define name="myContent">
+		<br></br>
+		<h:form>
+		Nom <h:inputText id="lastname" value="#{userMBean.client.lastName}" required="true" requiredMessage="La saisie du nom est obligatoire"></h:inputText>
+		<h:message for="lastname" styleClass="errorBlock"/>
+			<br /> 
+		Prénom <h:inputText id="firstname" value="#{userMBean.client.firstName}" required="true" requiredMessage="La saisie du prénom est obligatoire"></h:inputText>
+			<h:message for="firstname" styleClass="errorBlock" />
+			<br /> 
+		E-mail <h:inputText id="email" value="#{userMBean.client.email}" required="true" requiredMessage="La saisie de l'adresse e-mail est obligatoire" validatorMessage="L'adresse e-mail renseignée est invalide ou incomplète"></h:inputText>
+			<h:message for="email" styleClass="errorBlock"/>
+			<br />
+		Telephone <h:inputText id="phonenumber" value="#{userMBean.client.phoneNumber}" required="true" requiredMessage="La saisie du numéro de téléphone est obligatoire"></h:inputText>
+			<h:message for="phonenumber" styleClass="errorBlock"/>
+			<br />
+		Login <h:inputText id="login" value="#{userMBean.login}" required="true" requiredMessage="La saisie du login est obligatoire"></h:inputText>
+			<h:message for="login" styleClass="errorBlock"/>
+			<br /> 
+		Mot de Passe (minimum 6 caractères)<h:inputSecret id="password" value="#{userMBean.clearPassword}" required="true" requiredMessage="La saisie du mot de passe est obligatoire" validatorMessage="Le mot de passe est trop court"></h:inputSecret>
+			<h:message for="password" styleClass="errorBlock"/>
+			<br />
+
+			<h:commandButton action="#{userMBean.doCreateAccount}" value="Créer un compte-client">
+				<f:setPropertyActionListener value="#{userMBean.client}" target="#{catalogueMBean.client}"></f:setPropertyActionListener>
+			</h:commandButton>
+
+			<h:outputLabel styleClass="messageConfirmation"
+				value="#{userMBean.message}" />
+		</h:form>
+	</ui:define>
+</ui:composition>
+</html>

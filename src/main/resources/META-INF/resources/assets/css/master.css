@@ -1,0 +1,298 @@
+@import
+	url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	min-height: 100vh;
+	font-family: 'Open Sans', sans-serif;
+    background-color: yellow !important;
+	display: flex;
+	flex-direction: column;
+	align-content: stretch;
+}
+
+#content{
+	background-color: red;
+	display: flex;
+	flex-direction: column;
+}
+
+#ourContent{
+	background-color: blue;
+}
+
+/* menu */
+
+.navbar {
+	_margin: 0 !important;
+}
+
+nav ul>li>a>.caret {
+	display: none;
+}
+
+a>b.caret {
+	display: none;
+}
+
+.navbarRightBlock a {
+	color: grey;
+}
+
+.navbarRightBlock a:hover {
+	color: #3d3d3d;
+	text-decoration: none;
+}
+
+.loggedUserName {
+	_font-size: 13px;
+	padding: 8px;
+}
+
+/* Content */
+#contentFlex {
+	display: flex;
+	justify-content: space-around;
+	height: 100%;
+	_min-height: 78vh;
+	margin-bottom: 50px;
+}
+
+#contentDiv {
+	background: white;
+	margin: 0;
+	width: 1800px;
+	max-width: 90%;
+	padding: 0px;
+	box-shadow: 10px 10px 39px -26px rgba(0, 0, 0, 0.75);
+}
+
+#contentInclude {
+	padding: 0;
+}
+
+/* Login */
+.myAccountButton {
+	_max-width: 140px;
+	_font-size: 11px;
+	position: relative;
+	display: flex;
+	padding-left: 0 !important;
+}
+
+.myAccountButton>.myAccountLogin {
+	overflow: hidden;
+}
+
+.pictureDiv {
+	_float: right;
+	min-width: 30px;
+	max-width: 30px;
+	min-height: 30px;
+	max-height: 30px;
+	background-color: rgb(243, 243, 243);
+	border-radius: 50%;
+	box-shadow: inset 0 0 8px #00000033;
+	
+    overflow: hidden;
+}
+
+.pictureDiv img {
+	width: 100%;
+}
+
+.navbarRightBlock {
+	display: flex;
+}
+
+/* Notifications */
+.notificationGroup {
+	position: relative;
+	margin: 10px !important;
+	
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.numNotifications {
+	height: 18px;
+	width: 18px;
+	position: absolute;
+	color: white;
+	background: red;
+	border-radius: 50%;
+	padding: 5px;
+	font-size: 8px;
+	font-weight: bold;
+	top: 9px;
+	right: 5px;
+	text-align: center;
+}
+
+/* Erreur */
+.messageErreur {
+	color: red;
+}
+
+/* Section de recherche */
+.rechercheDiv {
+	padding: 20px;
+	display: flex;
+}
+
+.rechercheDiv input[type="text"] {
+	flex-grow: 1;
+}
+
+.rechercheDiv span {
+	padding: 5px 10px;
+}
+
+img.resize {
+	max-width: 200px;
+}
+
+.rechercheFiltresDiv {
+	display: flex;
+}
+
+.rechercheFiltresDiv div {
+	padding: 0 6px;
+}
+
+/* Tables */
+.table {
+	padding: 5px;	
+	margin-bottom: 0 !important;
+}
+
+.table td {
+	padding: 2px;
+}
+
+.table th {
+	padding: 2px;
+}
+
+/* Agendas */
+.agendaPetit {
+	min-width: 600px;
+	max-width: 83em;
+	margin: 5%;
+}
+
+/* Boutons layout */
+.centerButtons {
+	display: flex;
+	justify-content: center;
+	padding: 10px 0;
+}
+
+.centerButtons>* {
+	margin: 0 14px;
+}
+
+element.style {
+    background-color: rgba(111, 207, 151, 0.42);
+}
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+
+.boutonGris {
+    box-shadow: 2px 1px 10px -4px #24302144;
+    border-radius: 6px;
+    border: 1px solid #ffffff;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 15px;
+    padding: 4px 18px;
+    text-decoration: none;
+    background-color:#aaaaaa;
+}
+
+.boutonGris:hover {
+	background-color:#a0a0a0;
+}
+
+.boutonGris:active {
+	position:relative;
+	top:1px;
+}
+
+.boutonSpecial {
+    box-shadow: 2px 1px 10px -4px #24302144;
+    border-radius: 6px;
+    border: 1px solid #ffffff;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 15px;
+    padding: 4px 18px;
+    text-decoration: none;
+    background-color:#88ccb5;
+}
+
+.boutonSpecial:hover {
+	background-color:#80c8ae;
+}
+
+.boutonSpecial:active {
+	position:relative;
+	top:1px;
+}
+
+.boutonToggle {
+	font-size: 11px;
+	margin-bottom: 8px;
+}
+
+/* Kebab buttons */
+.fa-ellipsis-v {
+    margin: 0 8px;
+}
+
+/* Scrollbars */
+
+/*
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #bde6d1;
+  border: 0px none #ffffff;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #bde6d1;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #bde6d1;
+}
+::-webkit-scrollbar-track {
+  background: lightgrey;
+  border: 0px none #ffffff;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-track:hover {
+  background: lightgrey;
+}
+::-webkit-scrollbar-track:active {
+  background: lightgrey;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+*/

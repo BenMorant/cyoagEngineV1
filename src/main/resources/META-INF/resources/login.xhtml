@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+	<ui:composition template="/welcomeV1.xhtml">
+		<ui:define name="CSS">
+			<h:outputStylesheet name="CSS/master.css"></h:outputStylesheet>
+		</ui:define>
+		<ui:define name="userInfo">
+			<h:form>
+			<div class="elt">
+			login : <h:inputText value="#{catalogueMBean.login}"></h:inputText>
+			password : <h:inputSecret value="#{catalogueMBean.clearPassword}"/>
+					<h:commandButton value="connexion"
+						action="#{catalogueMBean.doConnection}" >
+						<f:setPropertyActionListener value="#{userBean.client}" target="#{catalogueMBean.client}"></f:setPropertyActionListener>
+					</h:commandButton>
+					<h:outputLabel value="#{catalogueMBean.message}" />
+					</div>
+			</h:form>
+		</ui:define>
+	</ui:composition>
+</html>
