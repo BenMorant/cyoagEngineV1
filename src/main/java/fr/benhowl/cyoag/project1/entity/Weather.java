@@ -31,6 +31,8 @@ public class Weather implements Serializable{
 	public Weather(String name) {
 		this.name = name;
 	}
+
+
 	
 	
 
