@@ -25,6 +25,9 @@ import lombok.Setter;
 @Entity
 @DiscriminatorValue("Enemy")
 
-public class Enemy extends People implements Serializable {
+public class Enemy extends People implements Serializable {/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 
 }

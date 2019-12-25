@@ -40,15 +40,15 @@ public class User implements Serializable{
 	@Column(name = "profile_picture")
     private String profilePicture;
 
-	@Column (name = "user_email")
+	@Column (name = "email")
 	private String email;
 	
-    @OneToMany
-    private List<Hero> heroes = new ArrayList<Hero> ();
-
     @OneToOne
     @JoinColumn(referencedColumnName = "id")
     private Credentials credentials;
+	
+    @OneToMany
+    private List<Hero> heroes = new ArrayList<Hero> ();
 
 	public User(Integer id, String lastName, String firstName, String profilePicture, String email,
 			Credentials credentials) {
