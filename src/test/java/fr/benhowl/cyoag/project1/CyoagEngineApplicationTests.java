@@ -1,14 +1,14 @@
-package fr.benhowl.cyoag.project1.tests;
+package fr.benhowl.cyoag.project1;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class CyoagTest {
+class CyoagEngineApplicationTests {
 	
 	@Test
 	void contextLoads() {
-		System.out.println("contextLoads de CyoagTest");
+		System.out.println("CyoagTest launched");
 	}
 
 

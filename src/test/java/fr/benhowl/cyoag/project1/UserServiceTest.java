@@ -1,4 +1,4 @@
-package fr.benhowl.cyoag.project1.tests;
+package fr.benhowl.cyoag.project1;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
