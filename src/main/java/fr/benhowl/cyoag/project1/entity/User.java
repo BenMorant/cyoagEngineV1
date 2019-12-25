@@ -49,7 +49,7 @@ public class User implements Serializable{
 	
     @OneToMany
     private List<Hero> heroes = new ArrayList<Hero> ();
-
+    
 	public User(Integer id, String lastName, String firstName, String profilePicture, String email,
 			Credentials credentials) {
 		super();

@@ -9,20 +9,10 @@ body {
 	margin: 0;
 	min-height: 100vh;
 	font-family: 'Open Sans', sans-serif;
-    background-color: yellow !important;
+    background-color: #f4f7fb !important;
 	display: flex;
 	flex-direction: column;
 	align-content: stretch;
-}
-
-#content{
-	background-color: red;
-	display: flex;
-	flex-direction: column;
-}
-
-#ourContent{
-	background-color: blue;
 }
 
 /* menu */

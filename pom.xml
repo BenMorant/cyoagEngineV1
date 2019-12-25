@@ -60,7 +60,7 @@
 			<scope>test</scope>
 		</dependency>
 
-		<!-- spring-boot-devtools useful for refresh without restarting -->
+		<!-- spring-boot-devtools useful for refreshing without restarting the application server (here : tomcat) -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
@@ -89,6 +89,43 @@
 			<groupId>commons-fileupload</groupId>
 			<artifactId>commons-fileupload</artifactId>
 			<version>1.4</version>
+		</dependency>
+		
+				<!-- Bootsfaces -->
+
+		<dependency>
+			<groupId>net.bootsfaces</groupId>
+			<artifactId>bootsfaces</artifactId>
+			<version>1.4.2</version>
+			<scope>compile</scope>
+		</dependency>
+
+		<!-- Prime Faces -->
+
+<!-- 		<dependency> -->
+<!-- 			<groupId>org.primefaces</groupId> -->
+<!-- 			<artifactId>primefaces</artifactId> -->
+<!-- 			<version>7.0</version> -->
+<!-- 		</dependency> -->
+		
+		<!-- https://mvnrepository.com/artifact/org.primefaces.themes/all-themes -->
+<!-- 		<dependency> -->
+<!-- 		    <groupId>org.primefaces.themes</groupId> -->
+<!-- 		    <artifactId>all-themes</artifactId> -->
+<!-- 		    <version>1.0.10</version> -->
+<!-- 		</dependency> -->
+
+		<!-- PrettyFaces (pour les URL) -->
+
+		<dependency>
+			<groupId>org.ocpsoft.rewrite</groupId>
+			<artifactId>rewrite-servlet</artifactId>
+			<version>3.4.1.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>org.ocpsoft.rewrite</groupId>
+			<artifactId>rewrite-config-prettyfaces</artifactId>
+			<version>3.4.1.Final</version>
 		</dependency>
 
 

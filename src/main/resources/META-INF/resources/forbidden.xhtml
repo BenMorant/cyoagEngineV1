@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:b="http://bootsfaces.net/ui" xmlns:p="http://primefaces.org/ui">
+
+<h:body>
+
+	<ui:composition template="/template.xhtml">
+
+		<ui:define name="head">
+			<title>#{navigationBean.websiteTitle}</title>
+		</ui:define>
+
+		<ui:define name="content">
+			<!-- 			<link rel="stylesheet" type="text/css" href="css/forbidden.css" /> -->
+			<link rel="stylesheet" type="text/css" href="css/index.css" />
+
+			<div id="enTete">
+				<img src="images/cursus/logo-afc-coul-transp.png" alt="image" />
+				<h1>Accès refusé</h1>
+			</div>
+
+			<div class="conteneur">
+
+				<div class="card">
+					<div id="colAlerte">
+						<b:alert severity="danger">
+							<strong> Erreur ! </strong> Désolé, vous n'avez pas accès à la page demandée. </b:alert>
+					</div>
+					<div id="cadreCentre">
+						<div class="hflex">
+							<b:link href="connexion" value="Se connecter" />
+						</div>
+						<div class="hflex">
+							<a href="./">Retourner à l'accueil</a>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</ui:define>
+	</ui:composition>
+
+</h:body>
+</html>

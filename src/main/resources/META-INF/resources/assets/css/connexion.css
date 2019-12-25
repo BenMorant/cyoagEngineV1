@@ -1,0 +1,19 @@
+#enTete {
+	background-color: rgba(111, 207, 151, 0.42);
+	margin-left: opx;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	display: flex;
+}
+
+#enTete img {
+	width: 250px;
+	display: inline;
+}
+
+.bouton {
+	display: inline-block;
+	text-align: center;
+	width: 100%;
+	margin-bottom: 10px;
+}
