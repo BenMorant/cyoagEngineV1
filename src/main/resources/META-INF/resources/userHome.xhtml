@@ -4,75 +4,17 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
 	xmlns:h="http://xmlns.jcp.org/jsf/html"
-	xmlns:f="http://xmlns.jcp.org/jsf/core">
-<h:head>
-<h:outputStylesheet name="CSS/main.css"></h:outputStylesheet> 
-</h:head> 
-<ui:composition template="/welcomeV1.xhtml">
-		<ui:define name="CSS">
-			<h:outputStylesheet name="CSS/main.css"></h:outputStylesheet>
-		</ui:define>
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<ui:composition template="/template.xhtml">
+	<ui:define name="css">
+		<h:outputStylesheet name="assets/css/main.css"></h:outputStylesheet>
+	</ui:define>
+	<ui:define name="content">
+	
+			<h1>BIENVENUE #{userMBean.user.firstName}</h1><br />
 		
-		
-		<ui:define name="myContent">
-		
-			<h1>NOS PROMOTIONS :</h1><br />
-			<div class="product-promotion">
-				<ui:repeat var="product" value="#{promotionMBean.products}">
-					<div class="elt">
-						<h:form>
-							<h:commandLink action="#{catalogueMBean.doGetProductDetails(product)}">
-								<div >
-									<h:graphicImage class="" height="200"
-										url="images/#{product.photos[0].path}" alt="photo du produit" />
-								</div>
-								<div>
-								<h1>#{product.name}</h1>
-								</div>
-								<div >
-									<h:outputText value="#{product.price}">
-										<f:convertNumber pattern="#0.00" />
-									</h:outputText> €
-									&nbsp;
-									<div class="promo-value">
-									<h:outputText  value="#{catalogueMBean.getPromo(product)}" ></h:outputText>
-									</div>
-								</div>
-								<div class="new-price">
-									<h:outputText value="#{catalogueMBean.calculateNewPrice(product)}"/>
-								</div>
-							</h:commandLink>
-							<h:commandButton value="ajouter"
-									actionListener="#{catalogueMBean.doAddToCart(product)}">
-							</h:commandButton>
-						</h:form>
-					</div>
-				</ui:repeat>
-			</div>
-			
-			<h1>TOUS LES PRODUITS :</h1><br />
-			<div class="product-list">
-				<ui:repeat var="product" value="#{catalogueMBean.allProducts}">
-					<div class="elt">
-						<h:form>
-							<h:commandLink action="#{catalogueMBean.doGetProductDetails(product)}">
-								<div >
-									<h:graphicImage class="" height="200"
-										url="images/#{product.photos[0].path}" alt="photo du produit" />
-								</div>
-								<h1>#{product.name}</h1>
-								<h:outputText value="#{product.price}">
-									<f:convertNumber pattern="#0.00" />
-								</h:outputText> €
-								<br />
-							</h:commandLink>
-							<h:commandButton value="ajouter"
-									actionListener="#{catalogueMBean.doAddToCart(product)}">
-							</h:commandButton>
-						</h:form>
-					</div>
-				</ui:repeat>
-			</div>
 		</ui:define>
 		
 </ui:composition>

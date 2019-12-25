@@ -24,7 +24,7 @@ import java.io.Serializable;
 @ManagedBean
 @SessionScoped
 @Getter @Setter @NoArgsConstructor
-public class ConnectionMBean implements Serializable {
+public class UserMBean implements Serializable {
 	
 	/**
 	 * 
@@ -38,7 +38,7 @@ public class ConnectionMBean implements Serializable {
 	
 	private String message;
 	
-	private User user = new User();
+	private User user;
 	
 	@Inject
 	private CredentialsService credentialsService;
@@ -49,18 +49,17 @@ public class ConnectionMBean implements Serializable {
 	
 	@PostConstruct
 	public void init() {
+		
+		user = new User();
 	}
 
-	public String Connect() {
+	public String connect() {
 		Credentials credentials = credentialsService.findWithLogin(this.login);
 		if(credentials != null) {
-			Credentials cred = credentials;
 			try {
-				if(AuthenticationManager.authenticate(clearPassword, cred)) {
+				if(AuthenticationManager.authenticate(clearPassword, credentials)) {
 					user = userService.findWithCredentials(credentials);
-							
-							//.get(0); 
-					//TODO : I don't know why it shows me an error
+					return "userHome.xhtml?faces-redirect=true";		
 				} else {
 					message = "indentifiants incorrects";
 					return "userHome.xhtml?faces-redirect=true";
@@ -68,15 +67,16 @@ public class ConnectionMBean implements Serializable {
 
 			} catch (Exception e) {
 				e.printStackTrace();
+				message = e.getMessage();
+				return "login.xhtml";
 			}
 		} else {
 			message = "indentifiants incorrects";
 			return "login.xhtml";
 		}
-		return "user.xhtml?faces-redirect=true";
 	}
 
-	public String doCreateAccount() {
+	public String createAccount() {
 		
 		Credentials credentials = new Credentials(login);
 		try {
