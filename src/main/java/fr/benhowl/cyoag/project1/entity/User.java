@@ -48,7 +48,7 @@ public class User implements Serializable{
     private Credentials credentials;
 	
     @OneToMany
-    private List<Hero> heroes = new ArrayList<Hero> ();
+    private List<Game> games = new ArrayList<Game> ();
     
 	public User(Integer id, String lastName, String firstName, String profilePicture, String email,
 			Credentials credentials) {

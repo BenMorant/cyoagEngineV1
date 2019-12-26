@@ -50,8 +50,8 @@ public class People implements Serializable{
     @OneToMany
     private List<Image> images = new ArrayList<Image> ();
     
-    @OneToMany
-    private List<Weapon> weapons = new ArrayList<Weapon> ();
+    @OneToOne
+    private Inventory inventory;
 
 
 }

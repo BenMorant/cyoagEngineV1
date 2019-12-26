@@ -1,5 +1,5 @@
 /* Weather */
-INSERT INTO `weather` (id, name) values (NULL, 'rain');
+INSERT INTO `weather` (id, kind, temperature, wind_level) values (NULL, 'rainy', '12', '1')
 
 /* Credentials */
 INSERT INTO `credentials` (id, login, hashed_password, salt) values (NULL, 'testLogin', 'testHashPassword', 'testSalt');

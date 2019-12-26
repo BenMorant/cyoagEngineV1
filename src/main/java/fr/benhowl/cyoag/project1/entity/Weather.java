@@ -2,6 +2,7 @@ package fr.benhowl.cyoag.project1.entity;
 
 import java.io.Serializable;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -16,7 +17,7 @@ import lombok.Setter;
 @Entity
 @Table(name = "weather")
 public class Weather implements Serializable{
-	
+
 	/**
 	 * 
 	 */
@@ -25,15 +26,27 @@ public class Weather implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
-	
-	private String name;
 
-	public Weather(String name) {
-		this.name = name;
+	private String kind;
+
+	private int temperature;
+	
+	@Column(name = "wind_level")
+	private int windLevel;
+
+	public Weather(Integer id, String kind, int temperature, int windLevel) {
+		super();
+		this.id = id;
+		this.kind = kind;
+		this.temperature = temperature;
+		this.windLevel = windLevel;
 	}
 
 
-	
-	
+
+
+
+
+
 
 }
