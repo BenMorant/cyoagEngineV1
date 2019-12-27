@@ -30,19 +30,15 @@ public class Map implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	
-	private float x;
-	private float y;
 	private String name;
 	private String description;
 	
     @OneToMany
     private List<Place> places = new ArrayList<Place> ();
 
-	public Map(Integer id, float x, float y, String name, String description, List<Place> places) {
+	public Map(Integer id, String name, String description, List<Place> places) {
 		super();
 		this.id = id;
-		this.x = x;
-		this.y = y;
 		this.name = name;
 		this.description = description;
 		this.places = places;

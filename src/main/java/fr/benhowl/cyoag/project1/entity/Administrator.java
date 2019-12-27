@@ -9,13 +9,18 @@ import lombok.Setter;
 
 @Getter @Setter @NoArgsConstructor
 @Entity
-@DiscriminatorValue("hero")
+@DiscriminatorValue("administrator")
+public class Administrator extends User {
 
-public class Hero extends People {
-	
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+
+	@Override
+	public ProfileType getProfile() {
+
+		return ProfileType.administrator;
+	}
 
 }

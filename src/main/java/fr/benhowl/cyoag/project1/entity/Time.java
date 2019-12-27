@@ -14,8 +14,8 @@ import lombok.Setter;
 
 @Getter @Setter @NoArgsConstructor
 @Entity
-@Table(name = "image")
-public class Image implements Serializable{
+@Table(name = "time")
+public class Time implements Serializable{
     
 	/**
 	 * 
@@ -26,15 +26,8 @@ public class Image implements Serializable{
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 
-    private String name;
-
-    private String path;
-
-	public Image(String name, String path) {
-		super();
-		this.name = name;
-		this.path = path;
-	}
+private int day;
+private int hour;
     
     
 

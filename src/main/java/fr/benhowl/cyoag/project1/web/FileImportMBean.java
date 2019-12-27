@@ -13,16 +13,14 @@ import javax.inject.Inject;
 import javax.servlet.ServletContext;
 import javax.servlet.http.Part;
 
-import fr.benhowl.cyoag.project1.business.CredentialsService;
 import fr.benhowl.cyoag.project1.business.UserService;
 import fr.benhowl.cyoag.project1.entity.User;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @ManagedBean
 @ViewScoped
-@Getter @Setter @NoArgsConstructor
+@Getter @Setter
 public class FileImportMBean implements Serializable{
 
 	/**
