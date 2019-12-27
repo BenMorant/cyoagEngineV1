@@ -24,8 +24,8 @@ public class Player extends User{
 	
 	private static final long serialVersionUID = 1L;
 	
-	@OneToMany(fetch = FetchType.EAGER, mappedBy = "player")
-    private List<Game> games = new ArrayList<Game> ();
+	@OneToMany
+    private List<Game> games;
 	
 	@Override
 	public ProfileType getProfile() {

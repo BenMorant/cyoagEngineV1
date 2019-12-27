@@ -46,11 +46,13 @@ public abstract class People implements Serializable{
 	private int magicPoint;
 	
 	private int experiencePoint;
+	
+	private int strength;
 
     @OneToMany
     private List<Image> images = new ArrayList<Image> ();
     
-    @OneToOne
+    @OneToOne(mappedBy = "people")
     private Inventory inventory;
 
 

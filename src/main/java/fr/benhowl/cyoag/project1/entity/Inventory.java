@@ -8,6 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
@@ -31,10 +32,11 @@ public class Inventory implements Serializable {
 	private Integer id;
 	
 	@OneToOne
+	@JoinColumn(referencedColumnName = "id")
 	private People people;
 	
 	@OneToMany
-	private List<Weapon> weapons = new ArrayList<Weapon> ();
+	private List<Weapon> weapons;
 	
 
 }

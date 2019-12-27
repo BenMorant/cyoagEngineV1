@@ -2,6 +2,7 @@ package fr.benhowl.cyoag.project1.entity;
 
 import java.io.Serializable;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -26,12 +27,13 @@ public class Game implements Serializable {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id")
 	private Integer id;
 	
 	private String Name;
 	
 	@ManyToOne
-	@JoinColumn(referencedColumnName="id")
+	//@JoinColumn(referencedColumnName="id")
 	private Player player;
 
 	public Game(Integer id, String name) {
