@@ -33,15 +33,8 @@ public class Map implements Serializable {
 	private String name;
 	private String description;
 	
-    @OneToMany
-    private List<Place> places = new ArrayList<Place> ();
 
-	public Map(Integer id, String name, String description, List<Place> places) {
-		super();
-		this.id = id;
-		this.name = name;
-		this.description = description;
-		this.places = places;
-	}
+    @OneToMany
+    private List<Region> regions;
 
 }

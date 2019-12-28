@@ -1,16 +1,15 @@
 package fr.benhowl.cyoag.project1.entity;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
 
+import javax.persistence.Column;
+import javax.persistence.DiscriminatorColumn;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
+import javax.persistence.Inheritance;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import lombok.Getter;
@@ -19,24 +18,26 @@ import lombok.Setter;
 
 @Getter @Setter @NoArgsConstructor
 @Entity
-@Table(name = "inventory")
-public class Inventory implements Serializable {
+@Inheritance
+@DiscriminatorColumn(name="objectType")
+@Table(name = "object")
+public abstract class Object implements Serializable {
 	
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id")
 	private Integer id;
 	
-	@OneToOne
-	@JoinColumn(referencedColumnName = "id")
-	private People people;
+	private String name;
+	private String description;
+	private Float weight;
 	
-	@OneToMany
-	private List<Object> objects;
-	
+	@ManyToOne
+	private Inventory inventory;
 
 }

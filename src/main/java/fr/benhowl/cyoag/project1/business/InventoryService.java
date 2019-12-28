@@ -6,5 +6,4 @@ public interface InventoryService {
 
 	Inventory saveInBase(Inventory inventory);
 	
-	//TODO method stealInventory
 }
