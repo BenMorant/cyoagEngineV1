@@ -1,13 +1,9 @@
 package fr.benhowl.cyoag.project1.web;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
 
 import javax.annotation.ManagedBean;
-import javax.annotation.PostConstruct;
 import javax.enterprise.context.SessionScoped;
-import javax.faces.annotation.ManagedProperty;
 
 import lombok.Getter;
 import lombok.Setter;

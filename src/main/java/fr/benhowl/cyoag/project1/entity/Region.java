@@ -1,7 +1,6 @@
 package fr.benhowl.cyoag.project1.entity;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Entity;

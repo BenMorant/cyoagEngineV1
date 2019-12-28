@@ -7,6 +7,7 @@ import javax.enterprise.context.SessionScoped;
 import javax.faces.context.FacesContext;
 import javax.inject.Inject;
 import javax.servlet.http.HttpSession;
+import javax.validation.constraints.Email;
 import javax.validation.constraints.Size;
 
 import fr.benhowl.cyoag.project1.business.AuthenticationManager;
@@ -40,8 +41,12 @@ public class ConnectionMBean implements Serializable {
 
 	@Size(min=6)
 	private String clearPassword;
-	
+		
 	private User user;
+	
+//	@Email
+//	private String email = user.getEmail();
+	
 	private String message;
 
 	private ArrayList<ConnectionListener> listeners;
