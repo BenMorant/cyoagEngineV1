@@ -4,19 +4,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import fr.benhowl.cyoag.project1.dao.ObjectDao;
-import fr.benhowl.cyoag.project1.entity.Object;
+import fr.benhowl.cyoag.project1.dao.ItemDao;
+import fr.benhowl.cyoag.project1.entity.Item;
 	
 	@Service
 	@Transactional
-	public class ObjectServiceImpl implements ObjectService {
+	public class ItemServiceImpl implements ItemService {
 
 		@Autowired
-		ObjectDao objectDao;
+		ItemDao itemDao;
 			
 		@Override
-		public Object saveInBase(Object object) {
-			return objectDao.save(object);
+		public Item saveInBase(Item item) {
+			return itemDao.save(item);
 		}
 
 }

@@ -90,8 +90,14 @@
 			<artifactId>commons-fileupload</artifactId>
 			<version>1.4</version>
 		</dependency>
-		
-				<!-- Bootsfaces -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.6.2</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- Bootsfaces -->
 
 <!-- 		<dependency> -->
 <!-- 			<groupId>net.bootsfaces</groupId> -->

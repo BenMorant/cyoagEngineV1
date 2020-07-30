@@ -19,9 +19,9 @@ import lombok.Setter;
 @Getter @Setter @NoArgsConstructor
 @Entity
 @Inheritance
-@DiscriminatorColumn(name="objectType")
-@Table(name = "object")
-public abstract class Object implements Serializable {
+@DiscriminatorColumn(name="itemType")
+@Table(name = "item")
+public abstract class Item implements Serializable {
 	
 	/**
 	 * 
